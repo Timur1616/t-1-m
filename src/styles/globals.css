@@ -1,0 +1,51 @@
+:root{--bg1:#0b2a6b;--bg2:#0a58d6;--panel:#0b1630cc;--panel2:#0c1f44cc;--text:#eaf3ff;--muted:#a9c7ff;--orange:#ff8a00;--orange2:#ffb45a;--green:#35ff6a;--shadow:#00000066;--stroke:#000000aa;--radius:14px;--px:3px;}
+*{box-sizing:border-box}html,body{height:100%}
+body{margin:0;color:var(--text);background:radial-gradient(1200px 700px at 20% 10%, #1d7bff55, transparent 60%),radial-gradient(900px 600px at 80% 30%, #00ffd533, transparent 60%),linear-gradient(180deg,var(--bg2),var(--bg1));font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;overflow-x:hidden}
+a{color:inherit}
+.grid{position:fixed;inset:0;background-image:linear-gradient(#ffffff10 1px, transparent 1px),linear-gradient(90deg,#ffffff10 1px, transparent 1px);background-size:48px 48px;mask-image:radial-gradient(circle at 50% 0%, #000 35%, transparent 75%);pointer-events:none;opacity:.35}
+.wrap{max-width:860px;margin:0 auto;padding:28px 16px 44px;position:relative}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+.brand{display:flex;align-items:center;gap:10px;font-family:"Press Start 2P",system-ui;letter-spacing:.5px;text-transform:uppercase;font-size:12px;user-select:none}
+.brand .dot{width:14px;height:14px;background:linear-gradient(180deg,var(--orange2),var(--orange));box-shadow:0 4px 0 var(--stroke);border:var(--px) solid var(--stroke)}
+.chip{display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:999px;background:#071126cc;border:var(--px) solid #000000aa;box-shadow:0 10px 0 var(--shadow);font-size:12px}
+.chip b{color:var(--orange2)}
+.status{display:inline-flex;align-items:center;gap:8px;font-family:"Press Start 2P",system-ui;font-size:10px}
+.lamp{width:10px;height:10px;border-radius:2px;background:var(--green);box-shadow:0 0 18px #35ff6a88;border:2px solid #000000aa}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:14px;margin-bottom:14px}
+.panel{background:linear-gradient(180deg,var(--panel2),var(--panel));border-radius:var(--radius);border:var(--px) solid #000000aa;box-shadow:0 14px 0 var(--shadow);position:relative;overflow:hidden}
+.panel::after{content:"";position:absolute;inset:-2px;background:radial-gradient(400px 140px at 20% 0%, #ffffff18, transparent 60%);pointer-events:none}
+.card{padding:18px 18px 16px;position:relative}
+.title{margin:0 0 10px;font-family:"Press Start 2P",system-ui;font-size:14px;line-height:1.35;text-transform:uppercase}
+.subtitle{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
+.profile{display:flex;gap:14px;align-items:center}
+.avatar{width:92px;height:92px;border-radius:18px;background:#071126cc;border:var(--px) solid var(--stroke);box-shadow:0 10px 0 var(--shadow);overflow:hidden;flex:0 0 auto;position:relative;display:grid;place-items:center}
+.avatar img{width:100%;height:100%;object-fit:cover;image-rendering:pixelated;transform:scale(1.02)}
+.badge{position:absolute;left:8px;bottom:8px;padding:6px 8px;border-radius:10px;background:#071126ee;border:var(--px) solid #000000aa;font-family:"Press Start 2P",system-ui;font-size:9px;color:var(--orange2);box-shadow:0 6px 0 var(--shadow)}
+.nick{font-family:"Press Start 2P",system-ui;font-size:14px;margin:0;text-transform:uppercase}
+.bio{margin:0;color:var(--muted);line-height:1.45;font-size:13px}
+.ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+@keyframes voxelWiggle{0%,100%{transform:translateY(-6px) rotate(0deg)}50%{transform:translateY(-6px) rotate(-0.35deg)}}
+.hover-game{will-change:transform,filter;transition:transform .10s ease,filter .12s ease,box-shadow .12s ease;transform:translateY(0)}
+.hover-game:hover{transform:translateY(-6px);filter:brightness(1.05);box-shadow:0 14px 0 var(--shadow),0 0 0 2px #ffffff12 inset,0 0 22px #ffb45a33}
+.hover-game:hover .ico{animation:voxelWiggle .55s ease-in-out infinite}
+.hover-game:active{transform:translateY(6px);filter:brightness(0.98)}
+.btn{cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 14px;border-radius:12px;border:var(--px) solid var(--stroke);box-shadow:0 8px 0 var(--shadow);color:#08101f;background:linear-gradient(180deg,var(--orange2),var(--orange));font-family:"Press Start 2P",system-ui;font-size:10px;letter-spacing:.4px;user-select:none;min-height:44px}
+.btn.secondary{background:linear-gradient(180deg,#eaf3ff,#b9d4ff);color:#071126}
+.btn.ghost{background:#071126cc;color:var(--text);border-color:#000000aa}
+.pillRow{display:flex;gap:10px;flex-wrap:wrap;padding:14px}
+.pill{padding:10px 12px;border-radius:999px;border:var(--px) solid #000000aa;background:#071126cc;box-shadow:0 10px 0 var(--shadow);font-family:"Press Start 2P",system-ui;font-size:9px;letter-spacing:.3px;color:var(--muted)}
+.pill b{color:var(--text)}
+.links{display:grid;gap:10px;padding:14px}
+.linkItem{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 12px;background:#071126cc;border:var(--px) solid #000000aa;border-radius:14px;box-shadow:0 10px 0 var(--shadow);text-decoration:none;color:var(--text)}
+.linkLeft{display:flex;align-items:center;gap:12px;min-width:0}
+.ico{width:40px;height:40px;border-radius:12px;border:var(--px) solid var(--stroke);box-shadow:0 8px 0 var(--shadow);display:grid;place-items:center;background:linear-gradient(180deg,var(--orange2),var(--orange));flex:0 0 auto}
+.label{display:flex;flex-direction:column;gap:4px;min-width:0}
+.label b{font-family:"Press Start 2P",system-ui;font-size:10px;letter-spacing:.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-transform:uppercase}
+.label span{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.arrow{font-family:"Press Start 2P",system-ui;font-size:12px;color:var(--orange2);opacity:.9;flex:0 0 auto}
+.footer{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;justify-content:space-between;align-items:center;opacity:.95}
+.small{font-size:12px;color:var(--muted)}
+.input,.textarea{width:100%;padding:10px;border-radius:12px;border:var(--px) solid #000000aa;background:#0c1f44cc;color:var(--text);outline:none}
+.textarea{min-height:90px;resize:vertical}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:720px){.hero{grid-template-columns:1fr}.chip{display:none}.row2{grid-template-columns:1fr}}
